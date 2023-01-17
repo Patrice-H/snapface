@@ -1,15 +1,15 @@
 <div class="face-snap-card">
-  <h2>{{ title }}</h2>
-  <p><span class="bold">Mis en ligne le : </span>{{ createdDate }}</p>
-  <img [src]="imageUrl" [alt]="title" />
+  <h2>{{ faceSnap.title }}</h2>
+  <p><span class="bold">Mis en ligne le : </span>{{ faceSnap.createdDate }}</p>
+  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
   <p>
     <span class="bold">Description : </span>
-    {{ description }}
+    {{ faceSnap.description }}
   </p>
   <p class="like">
     <button (click)="onLike()" title="{{ likeBtnText }}">
       &#10084;&#65039;
     </button>
-    {{ likes }}
+    {{ faceSnap.likes }}
   </p>
 </div>
