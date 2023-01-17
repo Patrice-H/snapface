@@ -1,0 +1,20 @@
+.software {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  app-face-snap {
+    flex: 200px;
+    max-width: 49%;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .software {
+    flex-direction: column;
+    app-face-snap {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
