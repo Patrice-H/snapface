@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
       'Mon logiciel 3D préféré',
       new Date(),
       6,
-      '../../assets/blender.png'
+      '../../assets/blender.png',
+      '../../assets/opensource.png'
     );
     this.secondSnap = new FaceSnap(
       'Photoshop',
