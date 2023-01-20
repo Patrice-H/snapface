@@ -7,32 +7,32 @@ import { FaceSnap } from './models/face-snap.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  firstSnap!: FaceSnap;
-  secondSnap!: FaceSnap;
-  thirdSnap!: FaceSnap;
+  faceSnaps!: FaceSnap[];
 
   ngOnInit() {
-    this.firstSnap = new FaceSnap(
-      'Blender',
-      'Mon logiciel 3D préféré',
-      new Date(),
-      6,
-      '../../assets/blender.png',
-      '../../assets/opensource.png'
-    );
-    this.secondSnap = new FaceSnap(
-      'Photoshop',
-      'Logiciel photo me permettant de découper des maquettes',
-      new Date(),
-      4,
-      '../../assets/photoshop.png'
-    );
-    this.thirdSnap = new FaceSnap(
-      'Illustrator',
-      'Logiciel de dessin',
-      new Date(),
-      3,
-      '../../assets/illustrator.png'
-    );
+    this.faceSnaps = [
+      {
+        title: 'Blender',
+        description: 'Logiciel de modélisation 3D',
+        createdDate: new Date,
+        likes: 3,
+        imageUrl: '../../assets/blender.png',
+        openSourceUrl: '../../assets/opensource.png'
+      },
+      {
+        title: 'Photoshop',
+        description: 'Logiciel de retouche photo',
+        createdDate: new Date,
+        likes: 2,
+        imageUrl: '../../assets/photoshop.png'
+      },
+      {
+        title: 'Illustrator',
+        description: 'Logiciel de dessin',
+        createdDate: new Date,
+        likes: 1,
+        imageUrl: '../../assets/illustrator.png'
+      }
+    ];
   }
 }
