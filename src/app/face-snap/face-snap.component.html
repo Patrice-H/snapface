@@ -8,7 +8,7 @@
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <p class="date text">
     <span class="bold">Mis en ligne le : </span
-    >{{ faceSnap.createdDate | date : "d/MM/yyyy à HH:mm" }}
+    >{{ faceSnap.createdDate | date : "d MMMM yyyy à HH:mm" }}
   </p>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
   <p class="text">
