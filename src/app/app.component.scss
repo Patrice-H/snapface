@@ -1,20 +1,19 @@
 .software {
-  display: flex;
+  display: grid;
   gap: 20px;
   padding: 20px;
-  flex-wrap: wrap;
-  app-face-snap {
-    flex: 200px;
-    max-width: 49%;
-    margin-bottom: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-container {
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .software {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 768px) {
   .software {
-    flex-direction: column;
-    app-face-snap {
-      width: 100%;
-      max-width: 100%;
-    }
+    grid-template-columns: 1fr;
   }
 }
