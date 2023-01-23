@@ -22,7 +22,7 @@
     }
   }
   p.date {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   p.text {
     margin-left: 5%;
@@ -33,12 +33,22 @@
     margin: auto;
   }
   img.open-source {
-    width: 10%;
+    width: 15%;
     position: absolute;
-    top: 12px;
-    right: 20px;
+    top: 17px;
+    right: 18px;
   }
   span.bold {
     font-weight: bold;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .face-snap-card {
+    h2 {
+      margin-top: 40px;
+    }
+    img.open-source {
+      width: 10%;
+    }
   }
 }
