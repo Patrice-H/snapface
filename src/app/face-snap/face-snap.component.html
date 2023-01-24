@@ -6,9 +6,15 @@
     class="open-source"
   />
   <h2>{{ faceSnap.title | uppercase }}</h2>
+  <p class="editor text">
+    <span class="bold">Éditeur : </span>{{ faceSnap.editor }}
+  </p>
+  <p class="version text">
+    <span class="bold">Version : </span>{{ faceSnap.version }}
+  </p>
   <p class="date text">
-    <span class="bold">Mis en ligne le : </span
-    >{{ faceSnap.createdDate | date : "d MMMM yyyy à HH:mm" }}
+    <span class="bold">Dernière mise à jour : </span
+    >{{ faceSnap.createdDate | date : "MMMM yyyy" }}
   </p>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
   <p class="text">
