@@ -45,4 +45,8 @@ export class FaceSnapsService {
       openSourceUrl: '../../assets/opensource.png',
     },
   ];
+
+  getAllFaceSnaps(): FaceSnap[] {
+    return this.faceSnaps;
+  }
 }
