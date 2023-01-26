@@ -1,5 +1,6 @@
 export class FaceSnap {
   constructor(
+    public id: number,
     public title: string,
     public editor: string,
     public version: string,
