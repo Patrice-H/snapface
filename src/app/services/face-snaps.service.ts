@@ -7,6 +7,7 @@ import { FaceSnap } from '../models/face-snap.model';
 export class FaceSnapsService {
   faceSnaps: FaceSnap[] = [
     {
+      id: 1,
       title: 'Blender',
       editor: 'Fondation Blender',
       version: '3.4',
@@ -17,6 +18,7 @@ export class FaceSnapsService {
       openSourceUrl: '../../assets/opensource.png',
     },
     {
+      id: 2,
       title: 'Photoshop',
       editor: 'Adobe',
       version: 'CC2022 23.5.4',
@@ -26,6 +28,7 @@ export class FaceSnapsService {
       imageUrl: '../../assets/photoshop.png',
     },
     {
+      id: 3,
       title: 'Illustrator',
       editor: 'Adobe',
       version: 'CC2022 26.5',
@@ -35,6 +38,7 @@ export class FaceSnapsService {
       imageUrl: '../../assets/illustrator.png',
     },
     {
+      id: 4,
       title: 'Gimp',
       editor: 'gimp.org',
       version: '2.10.32',
@@ -48,5 +52,14 @@ export class FaceSnapsService {
 
   getAllFaceSnaps(): FaceSnap[] {
     return this.faceSnaps;
+  }
+
+  likeById(id: number): void {
+    const faceSnap = this.faceSnaps.find((faceSnap) => faceSnap.id === id);
+    if (faceSnap) {
+      faceSnap.likes++;
+    } else {
+      throw new Error('FaceSnap not found');
+    }
   }
 }
