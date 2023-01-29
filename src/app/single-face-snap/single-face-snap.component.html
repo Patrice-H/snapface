@@ -1,0 +1,32 @@
+<div class="face-snap-card">
+    <img
+      *ngIf="faceSnap.openSourceUrl"
+      [src]="faceSnap.openSourceUrl"
+      alt="Logiciel Open Source"
+      class="open-source"
+    />
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <p class="editor text">
+      <span class="bold">Éditeur : </span>{{ faceSnap.editor }}
+    </p>
+    <p class="version text">
+      <span class="bold">Version : </span>{{ faceSnap.version }}
+    </p>
+    <p class="date text">
+      <span class="bold">Dernière mise à jour : </span
+      >{{ faceSnap.createdDate | date : "MMMM yyyy" }}
+    </p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+    <p class="text">
+      <span class="bold">Description : </span>
+      {{ faceSnap.description }}
+    </p>
+    <p class="like">
+      <button (click)="onLike()" title="{{ likeBtnText }}">
+        <span class="btn">&#10084;&#65039;</span>
+        <span class="res">
+          {{ faceSnap.likes }}
+        </span>
+      </button>
+    </p>
+  </div>
