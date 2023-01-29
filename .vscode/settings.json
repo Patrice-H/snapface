@@ -1,3 +1,4 @@
 {
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }
