@@ -64,6 +64,15 @@ export class FaceSnapsService {
     return this.faceSnaps;
   }
 
+  getFaceSnapById(faceSnapId: number): FaceSnap {
+    const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === faceSnapId);
+    if (!faceSnap) {
+        throw new Error('FaceSnap not found!');
+    } else {
+        return faceSnap;
+    }
+  }
+
   likeById(id: number): void {
     const faceSnap = this.faceSnaps.find((faceSnap) => faceSnap.id === id);
     if (faceSnap) {
