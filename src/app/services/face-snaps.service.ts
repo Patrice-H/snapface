@@ -48,6 +48,16 @@ export class FaceSnapsService {
       imageUrl: '../../assets/gimp.png',
       openSourceUrl: '../../assets/opensource.png',
     },
+    {
+      id: 4,
+      title: 'Web Designer',
+      editor: 'Google',
+      version: '14.0.4.1108',
+      description: 'Logiciel de création de contenu multimédia HTML5',
+      createdDate: new Date('2021 09'),
+      likes: 2,
+      imageUrl: '../../assets/webdesigner.png',
+    },
   ];
 
   getAllFaceSnaps(): FaceSnap[] {
