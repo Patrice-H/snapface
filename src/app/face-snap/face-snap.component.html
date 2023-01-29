@@ -1,4 +1,4 @@
-<div class="face-snap-card">
+<a (click)="onViewDetails()" class="face-snap-card">
   <img
     *ngIf="faceSnap.openSourceUrl"
     [src]="faceSnap.openSourceUrl"
@@ -22,11 +22,9 @@
     {{ faceSnap.description }}
   </p>
   <p class="like">
-    <button (click)="onLike()" title="{{ likeBtnText }}">
-      <span class="btn">&#10084;&#65039;</span>
-      <span class="res">
-        {{ faceSnap.likes }}
-      </span>
-    </button>
+    <span class="btn">&#10084;&#65039;</span>
+    <span class="res">
+      {{ faceSnap.likes }}
+    </span>
   </p>
-</div>
+</a>

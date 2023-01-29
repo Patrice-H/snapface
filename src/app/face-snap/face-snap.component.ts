@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { FaceSnap } from '../models/face-snap.model';
 import { FaceSnapsService } from '../services/face-snaps.service';
 
@@ -12,7 +13,10 @@ export class FaceSnapComponent implements OnInit {
   componentIsLiked!: boolean;
   likeBtnText!: string;
 
-  constructor(private faceSnapsService: FaceSnapsService) {}
+  constructor(
+    private faceSnapsService: FaceSnapsService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.componentIsLiked = false;
@@ -24,6 +28,11 @@ export class FaceSnapComponent implements OnInit {
       this.faceSnapsService.likeById(this.faceSnap.id);
       this.likeBtnText = 'Vous avez déjà ajouté un like !';
       this.componentIsLiked = true;
+      this.router.navigateByUrl('/facesnaps');
     }
+  }
+
+  onViewDetails() {
+    this.router.navigateByUrl(`/facesnaps/${this.faceSnap.id}`);
   }
 }
