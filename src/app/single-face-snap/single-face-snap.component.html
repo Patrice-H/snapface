@@ -1,26 +1,41 @@
-<div class="face-snap-card">
-  <img
-    *ngIf="faceSnap.openSourceUrl"
-    [src]="faceSnap.openSourceUrl"
-    alt="Logiciel Open Source"
-    class="open-source"
-  />
-  <h2>{{ faceSnap.title | uppercase }}</h2>
-  <p class="editor text">
-    <span class="bold">Éditeur : </span>{{ faceSnap.editor }}
-  </p>
-  <p class="version text">
-    <span class="bold">Version : </span>{{ faceSnap.version }}
-  </p>
-  <p class="date text">
-    <span class="bold">Dernière mise à jour : </span
-    >{{ faceSnap.createdDate | date : "MMMM yyyy" }}
-  </p>
+<header>
+  <h1>{{ faceSnap.title | uppercase }}</h1>
   <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
-  <p class="text">
-    <span class="bold">Description : </span>
-    {{ faceSnap.description }}
-  </p>
+  <h2 class="centred-titles">{{ faceSnap.description }}</h2>
+</header>
+<main>
+  <section class="details">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur
+    repellendus consequuntur quae aperiam a beatae, sapiente voluptate quasi
+    atque rerum cumque earum, veritatis error, vitae deleniti dicta harum
+    corrupti adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Architecto quas reprehenderit aut numquam natus nulla itaque quia harum
+    corrupti? Quia dignissimos, minus doloribus dolores ipsam rerum
+    exercitationem fuga aperiam quae? Lorem ipsum, dolor sit amet consectetur
+    adipisicing elit. Quaerat, voluptatem nesciunt ipsa labore in sed, possimus
+    laudantium hic vitae impedit ad architecto assumenda laboriosam. Ipsam
+    placeat iusto numquam animi ipsa!
+  </section>
+  <aside>
+    <p class="editor text">
+      <span class="bold">Éditeur : </span>{{ faceSnap.editor }}
+    </p>
+    <p class="version text">
+      <span class="bold">Dernière version : </span>{{ faceSnap.version }}
+    </p>
+    <p class="date text">
+      <span class="bold">Dernière mise à jour : </span
+      >{{ faceSnap.createdDate | date : "MMMM yyyy" }}
+    </p>
+    <img
+      *ngIf="faceSnap.openSourceUrl"
+      [src]="faceSnap.openSourceUrl"
+      alt="Logiciel Open Source"
+      class="open-source"
+    />
+  </aside>
+</main>
+<footer>
   <p class="like">
     <button (click)="onLike()" title="{{ likeBtnText }}">
       <span class="btn">&#10084;&#65039;</span>
@@ -29,4 +44,4 @@
       </span>
     </button>
   </p>
-</div>
+</footer>

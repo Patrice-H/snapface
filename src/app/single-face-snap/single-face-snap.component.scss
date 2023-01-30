@@ -1,3 +1,35 @@
+header {
+  text-align: center;
+  img {
+    width: 20%;
+  }
+}
+main {
+  display: flex;
+  gap: 50px;
+  padding: 0 50px;
+}
+aside {
+  width: 20%;
+  flex-grow: 1;
+  background-color: aquamarine;
+  img {
+    width: 15%;
+    display: block;
+    margin: auto;
+  }
+  span.bold {
+    font-weight: bold;
+  }
+}
+.centred-titles {
+  text-align: center;
+  position: relative;
+}
+.details {
+  max-width: 70%;
+  background-color: bisque;
+}
 .face-snap-card {
   position: relative;
   padding: 5px 20px 66px;
@@ -8,29 +40,7 @@
   p.like {
     text-align: center;
   }
-  p.like {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    button {
-      border: none;
-      background-color: white;
-      font-size: 16px;
-      &:hover {
-        cursor: pointer;
-      }
-      span.btn {
-        position: relative;
-        font-size: 32px;
-      }
-      span.res {
-        position: absolute;
-        margin: 15px 0 0 -26px;
-        color: white;
-        font-weight: bold;
-      }
-    }
-  }
+
   p.editor {
     margin-top: 40px;
   }
@@ -48,8 +58,31 @@
     top: 17px;
     right: 18px;
   }
-  span.bold {
-    font-weight: bold;
+}
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px;
+  p.like {
+    width: 100%;
+    button {
+      border: none;
+      background-color: white;
+      font-size: 24px;
+      &:hover {
+        cursor: pointer;
+      }
+      span.btn {
+        position: relative;
+        font-size: 48px;
+      }
+      span.res {
+        position: absolute;
+        margin: 22px 0 0 -38px;
+        color: white;
+        font-weight: bold;
+      }
+    }
   }
 }
 @media screen and (min-width: 1440px) {
@@ -60,5 +93,10 @@
     img.open-source {
       width: 10%;
     }
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    padding: 0 20px;
   }
 }
