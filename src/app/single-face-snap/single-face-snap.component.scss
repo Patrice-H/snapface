@@ -7,11 +7,12 @@ header {
 main {
   display: flex;
   gap: 50px;
-  padding: 0 50px;
+  padding: 30px 50px 0;
 }
 aside {
   width: 20%;
   flex-grow: 1;
+  padding: 0 20px;
   background-color: aquamarine;
   img {
     width: 15%;
@@ -28,6 +29,7 @@ aside {
 }
 .details {
   max-width: 70%;
+  padding: 20px;
   background-color: bisque;
 }
 .face-snap-card {
