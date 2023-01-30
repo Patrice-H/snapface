@@ -8,6 +8,7 @@ export class FaceSnap {
     public createdDate: Date,
     public likes: number,
     public imageUrl: string,
+    public details: string,
     public openSourceUrl?: string
   ) {}
 }
